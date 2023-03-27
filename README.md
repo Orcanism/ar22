@@ -1,0 +1,22 @@
+pages : 
+	- header d'onglets/liens dans toute les pages
+	- footer avec les liens du header
+	
+	- acceuil :
+		- liens vers réseau sociaux
+	- infos :
+		- novelles en rapport avec l'asso (facilement modifiable donc template facile)
+	- vidéos :
+		- videos de l'asso sur ytb ar22
+	- crew :
+		- photos avec descriptions des membres (dans le style de mon site de nsi)
+	- a propos :
+		- texte de cyril
+		- lien helloasso pour l'adhesion
+	- contact :
+		- systeme de contact similaire au systeme de support riot
+	- inscriptions :
+		- cours proposé (chacun des cours menera vers une page de description du cours en question et le lien de payement helloasso):
+			- cours individuel
+			- cours collectif
+			- stage

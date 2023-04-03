@@ -1,4 +1,60 @@
+:root {
+    --textColor: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+a {
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+.header {
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.header button {  
+    width: 50px;
+    height: 50px;
+}
+
+.header .menuWrapper {
+    opacity: 0;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header button:hover {
+    background-color: brown;
+    
+}
+
+.dropdownMenu {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.dropdownMenu a {
+    width: 200px;
+    height: 100%;
+    border: 5px;
+    border-color: black;
+    background-color: yellow;
+    text-align: center;
+    
 }

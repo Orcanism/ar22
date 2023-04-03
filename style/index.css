@@ -1,6 +1,8 @@
 :root {
     --textColor: rgb(0, 0, 0);
+    --textHoverColor: rgb(183, 0, 255);
     font-size: 30px;
+    margin: 10px;
 }
 
 * {
@@ -16,45 +18,40 @@ a {
 
 .header {
     width: 100%;
-    background-color: blue;
+    background-color: ransparent;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-}
-.header button {  
-    width: 50px;
-    height: 50px;
-}
-
-.header .menuWrapper {
-    opacity: 0;
-    width: 100%;
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
     align-items: center;
 }
+.header a {  
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
 
-.header button:hover {
-    background-color: brown;
-    
+.menuButton:hover {
+    background-color: var(--textHoverColor);
 }
 
 .dropdownMenu {
-    background-color: blueviolet;
+    opacity: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+    align-content: flex-start;
+    justify-content: space-evenly;
 }
 
 .dropdownMenu a {
     width: 200px;
     height: 100%;
-    border: 5px;
-    border-color: black;
-    background-color: yellow;
-    text-align: center;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdownMenu a:hover {
+    color: var(--textHoverColor);
 }

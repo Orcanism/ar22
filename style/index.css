@@ -18,7 +18,7 @@ a {
 
 .header {
     width: 100%;
-    background-color: ransparent;
+    background-color: transparent;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -45,11 +45,14 @@ a {
 }
 
 .dropdownMenu a {
-    width: 200px;
+    padding: 5px;
+    width: auto;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
+    transition: color 100ms ease-in-out;
 }
 
 .dropdownMenu a:hover {

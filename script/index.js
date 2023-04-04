@@ -19,3 +19,7 @@ function dropdownMenu() {
         isOpen = true;
     }
 }
+
+function easterEgg() {
+    document.getElementById("easterEgg").play();
+}

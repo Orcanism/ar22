@@ -9,11 +9,16 @@
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: 'Rubik', sans-serif;
 }
 
 a {
     color: var(--textColor);
     text-decoration: none;
+}
+
+image {
+    padding: 5px;
 }
 
 .header {
@@ -25,8 +30,8 @@ a {
     align-items: center;
 }
 .header a {  
-    width: 50px;
-    height: 50px;
+    /* width: 50px;
+    height: 50px; */
     cursor: pointer;
 }
 

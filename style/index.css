@@ -30,6 +30,10 @@ a {
     cursor: pointer;
 }
 
+.menuButton {
+    transition: background-color 100ms ease-in-out;
+}
+
 .menuButton:hover {
     background-color: var(--textHoverColor);
 }

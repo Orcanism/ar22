@@ -1,6 +1,7 @@
 :root {
     --textColor: rgb(0, 0, 0);
     --textHoverColor: rgb(166,34,45);
+    --backgroundColor: lightgray;
     font-size: 30px;
     margin: 10px;
 }
@@ -19,6 +20,12 @@ a {
 
 image {
     padding: 5px;
+}
+
+@media screen and (max-width: 450px) {
+    .footer {
+        flex-direction: column;
+    }
 }
 
 .header {
@@ -64,6 +71,38 @@ image {
     transition: color 100ms ease-in-out;
 }
 
-.dropdownMenu a:hover {
+.dropdownMenu a:hover,.footer a:hover {
     color: var(--textHoverColor);
+}
+
+.footer {
+    background-color: var(--backgroundColor);
+    min-height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.footer div {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.footer a {
+    padding: 5px;
+    width: auto;
+    transition: color 100ms ease-in-out;
+}
+.rightFoot a {
+    padding: 10px;
+    height: 50px;
+}
+
+.body {
+    height: 200px;
 }

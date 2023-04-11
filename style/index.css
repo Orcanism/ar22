@@ -1,6 +1,7 @@
 :root {
-    --textColor: rgb(0, 0, 0);
-    --textHoverColor: rgb(166,34,45);
+    --textColor: rgb(0,0,0);
+    --textHoverColorRed: rgb(166,34,45);
+    --textHoverColorGray: rgb(235, 235, 235);
     --backgroundColor: lightgray;
     font-size: 30px;
 }
@@ -17,26 +18,23 @@ a {
     text-decoration: none;
 }
 
-h1 {
-    font-size: 25px;
-}
-
 image {
     padding: 5px;
 }
 
-input:focus {
+input,textarea {
+    transition: background-color 100ms ease-in-out
+}
+
+input:focus,textarea:focus {
     outline: none;
-    box-shadow: var(--textHoverColor);
-    border:2px solid var(--textHoverColor);
+    box-shadow: var(--textHoverColorRed);
+    border:2px solid var(--textHoverColorRed);
     border-style: outset;
 }
 
-textarea:focus {
-    outline: none;
-    box-shadow: var(--textHoverColor);
-    border:2px solid var(--textHoverColor);
-    border-style: outset;
+input:hover,textarea:hover {
+    background-color: var(--textHoverColorGray);
 }
 
 body {
@@ -52,18 +50,23 @@ body {
     }
 }
 
+.body {
+    margin : 20px;
+}
+
+/* HEADER STYLE */
+
 .header {
     width: auto;
     margin: 10px;
+    margin-bottom: 0px;
     background-color: transparent;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
 }
-.header a {  
-    /* width: 50px;
-    height: 50px; */
+.header a {
     cursor: pointer;
 }
 
@@ -72,7 +75,7 @@ body {
 }
 
 .menuButton:hover {
-    background-color: var(--textHoverColor);
+    background-color: var(--textHoverColorRed);
 }
 
 .dropdownMenu {
@@ -97,8 +100,10 @@ body {
 }
 
 .dropdownMenu a:hover,.footer a:hover {
-    color: var(--textHoverColor);
+    color: var(--textHoverColorRed);
 }
+
+/* FOOTER STYLE */
 
 .footer {
     background-color: var(--backgroundColor);
@@ -128,9 +133,7 @@ body {
     height: 50px;
 }
 
-.body {
-    margin : 20px;
-}
+/* CONTACT STYLE */
 
 .bodyContact {
     padding: 10px;
@@ -168,11 +171,17 @@ body {
     padding: 2px;
 }
 
+/* VIDEO STYLE */
+
 .bodyVideos {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
+}
+
+.bodyVideos h1 {
+    font-size: 25px;
 }
 
 .bodyVideos h2 {
@@ -196,4 +205,49 @@ body {
 
 .videoListContest div > *,.videoListChill div > * {
     margin: 5px;
+}
+
+/* CREW STYLE */
+
+.bodyCrew {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.crewWrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    padding: 10px;
+    margin: 10px;
+}
+
+.imgWrap {
+    position: relative;
+    display: flex;
+    margin: 20px;
+}
+
+.imgWrap img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+.cyrilImg,.theoImg,.tomImg,.clementImg,.erineImg,.samanthaImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 100ms ease-in-out;
+    opacity: 0;
+}
+
+.cyrilImg:hover,.theoImg:hover,.tomImg:hover,.clementImg:hover,.erineImg:hover,.samanthaImg:hover {
+    opacity: 1;
+}
+
+.crewText {
+    margin: 30px;
 }

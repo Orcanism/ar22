@@ -133,19 +133,29 @@ body {
 }
 
 .bodyContact {
-    background-color: var(--backgroundColor);
     padding: 10px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .bodyContact img {
-    width: 18%;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: var(--backgroundColor);
+    width: 309px;
+    max-width: 100%;
+    height: auto;
 }
 
 .contactForm {
+    padding: 10px;
+    background-color: var(--backgroundColor);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .contactForm > * {

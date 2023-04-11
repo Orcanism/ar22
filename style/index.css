@@ -23,7 +23,7 @@ image {
 
 body {
     min-height: 100vh;
-    margin: 10px;
+    /*margin: 10px;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -112,4 +112,5 @@ body {
 
 .body {
     /* min-height: 100vh; */
+    margin: 10px;
 }

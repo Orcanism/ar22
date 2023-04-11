@@ -1,47 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Contact</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style/index.css'>
-    <link rel="icon" href="image/logoweb.png">
-    <script src='script/index.js'></script>
-</head>
-<body>
-    <div class="header">
-        <a class="menuButton" onclick="dropdownMenu()"><img src="image/logos/menuIcon.png" width="50px" height="50px"></a>
-        <div class="dropdownMenu">
-            <a href="index.html#">Acceuil</a>
-            <a href="news.html">News</a>
-            <a href="crew.html">Crew</a>
-            <a href="about.html">À Propos</a>
-            <a href="inscriptions.html">Inscriptions</a>
-            <a href="Contact.html">Contact</a>
-        </div>
-    </div>
-    <div class="body">
-        <form action="php/process-form.php" method="POST">
-                    <label for="name">Nom:</label>
-                    <input type="text" id="name" name="name" required><br>
-
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required><br>
-
-                    <label for="subject">Sujet:</label>
-                    <input type="text" id="subject" name="subject" required><br>
-
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" required></textarea><br>
-
-                    <input type="submit" value="Envoyer">
-        </form>
-
-
-    </div>
-    <div class="footer">
-
-    </div>
-</body>
-</html>
+<?php
+    $VotreAdresseMail="cyrilsimonodu67@gmail.com";
+// si le bouton "Envoyer" est cliquï¿½
+if(isset($_POST['envoyer'])) {
+    //on vï¿½rifie que le champ mail est correctement rempli
+    if(empty($_POST['mail'])) {
+        echo "Le champ mail est vide";
+    } else {
+        //on vï¿½rifie que l'adresse est correcte
+        if(!preg_match("#^[a-z0-9_-]+((\.[a-z0-9_-]+){1,})?@[a-z0-9_-]+((\.[a-z0-9_-]+){1,})?\.[a-z]{2,}$#i",$_POST['mail'])){
+            echo "L'adresse mail entrï¿½e est incorrecte";
+        }else{
+            //on vï¿½rifie que le champ sujet est correctement rempli
+            if(empty($_POST['sujet'])) {
+                echo "Le champ sujet est vide";
+            }else{
+                //on vï¿½rifie que le champ message n'est pas vide
+                if(empty($_POST['message'])) {
+                    echo "Le champ message est vide";
+                }else{
+                    //tout est correctement renseignï¿½, on envoi le mail
+                    //on renseigne les entï¿½tes de la fonction mail de PHP
+                    $Entetes = "MIME-Version: 1.0\r\n";
+                    $Entetes .= "Content-type: text/html; charset=UTF-8\r\n";
+                    $Entetes .= "From: Nom de votre site <".$_POST['mail'].">\r\n";//de prï¿½fï¿½rence une adresse avec le mï¿½me domaine de lï¿½ oï¿½, vous utilisez ce code, cela permet un envoie quasi certain jusqu'au destinataire
+                    $Entetes .= "Reply-To: Nom de votre site <".$_POST['mail'].">\r\n";
+                    //on prï¿½pare les champs:
+                    $Mail=$_POST['mail']; 
+                    $Sujet='=?UTF-8?B?'.base64_encode($_POST['sujet']).'?=';//Cet encodage (base64_encode) est fait pour permettre aux informations binaires d'ï¿½tre manipulï¿½es par les systï¿½mes qui ne gï¿½rent pas correctement les 8 bits (=?UTF-8?B? est une norme afin de transmettre correctement les caractï¿½res de la chaine)
+                    $Message=htmlentities($_POST['message'],ENT_QUOTES,"UTF-8");//htmlentities() converti tous les accents en entitï¿½s HTML, ENT_QUOTES Convertit en + les guillemets doubles et les guillemets simples, en entitï¿½s HTML
+                    //en fin, on envoi le mail
+                    if(mail($VotreAdresseMail,$Sujet,nl2br($Message),$Entetes)){//la fonction nl2br permet de conserver les sauts de ligne et la fonction base64_encode de conserver les accents dans le titre
+                        echo "Le mail ï¿½ ï¿½tï¿½ envoyï¿½ avec succï¿½s!";
+                    } else {
+                        echo "Une erreur est survenue, le mail n'a pas ï¿½tï¿½ envoyï¿½";
+                    }
+                }
+            }
+        }
+    }
+}
+?>

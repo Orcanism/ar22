@@ -17,6 +17,10 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    font-size: 25px;
+}
+
 image {
     padding: 5px;
 }
@@ -150,4 +154,34 @@ body {
 
 .contactForm input,.contactForm textarea {
     padding: 2px;
+}
+
+.bodyVideos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.bodyVideos h2 {
+    margin-top: 10px;
+}
+
+.videoListContest,.videoListChill {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--backgroundColor);
+    margin: 10px;
+}
+
+.videoListContest div,.videoListChill div {
+    margin: 10px;
+}
+
+.videoListContest div > *,.videoListChill div > * {
+    margin: 5px;
 }

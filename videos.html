@@ -3,29 +3,74 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Vidéos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <title>Acceuil</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/index.css'>
-    <link rel="icon" href="image/logoweb.png">
+    <link rel="icon" href="image/logoweb4.png">
     <script src='script/index.js'></script>
 </head>
 <body>
     <div class="header">
-        <a class="menuButton" onclick="dropdownMenu()"><img src="image/logos/menuIcon.png" width="50px" height="50px"></a>
+        <a class="menuButton" onclick="dropdownMenu()" style="width: 50px; height: 50px;"><img src="image/logos/menuIcon.png" width="50px" height="50px" /></a>
         <div class="dropdownMenu">
             <a href="index.html#">Acceuil</a>
             <a href="news.html">News</a>
             <a href="crew.html">Crew</a>
             <a href="about.html">À Propos</a>
             <a href="inscriptions.html">Inscriptions</a>
-            <a href="Contact.html">Contact</a>
+            <a href="php/contact.php">Contact</a>
         </div>
+        <a class="easterEgg" onclick="easterEgg()" style="cursor: default; width: 100px; height: 50px;"><img src="image/logos/logo AR22.png" width="100px" height="50px" /></a>
+        <audio id="easterEgg" src="audio/easterEgg.mp3"></audio>
     </div>
     <div class="body">
-
+        <div class="bodyVideos"> 
+            <h2>Contest Clips</h2>
+                <div class="videoListContest">
+                    <div>
+                        <h1>Potatoes Contest V1 / 2019</h1>
+                        <iframe width="320" height="180" src="https://www.youtube.com/embed/6salt4wf6GI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <h1>Potatoes Contest V2 /2020</h1>
+                        <iframe width="320" height="180" src="https://www.youtube.com/embed/AYQekvJFuwg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <h1>Potatoes Contest V4 / 2022</h1>
+                        <iframe width="320" height="180" src="https://www.youtube.com/embed/KcfNVxe-OB4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            <h2>Chill Clips</h2>
+                <div class = videoListChill>
+                    <div>
+                        <h1>Schlagtrip 2020</h1>
+                        <iframe width="320" height="180" src="https://www.youtube.com/embed/1IPnoWNaT0Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <h1>AR22 Tape</h1>
+                        <iframe width="320" height="180" src="https://www.youtube.com/embed/DvNSChJHY2s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+        </div>
     </div>
     <div class="footer">
-
+        <div class="leftFoot">
+            <a href="index.html#">Acceuil</a>
+            <a href="news.html">News</a>
+            <a href="crew.html">Crew</a>
+        </div>
+        <div class="middleFoot">
+            <a href="about.html">À Propos</a>
+            <a href="inscriptions.html">Inscriptions</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="rightFoot">
+            <a href="https://www.instagram.com/ar22_association/"><img alt="Instagram.com" src="image/Logos/Résaux/Insta.png" title="Instagram" width="50px" height="50px" /></a>
+            <a href="https://www.facebook.com/association.ar22"> <img alt="Facebook.com" src="image/Logos/Résaux/FB.png" title="Facebook" width="50px" height="50px" /></a>
+        </div>
     </div>
 </body>
 </html>

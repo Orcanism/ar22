@@ -201,6 +201,9 @@ body {
 
 .videoListContest div,.videoListChill div {
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .videoListContest div > *,.videoListChill div > * {
@@ -217,7 +220,7 @@ body {
 
 .crewWrap {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     background-color: var(--backgroundColor);
     padding: 10px;
@@ -250,4 +253,10 @@ body {
 
 .crewText {
     margin: 30px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.crewText p {
+    text-align: justify;
 }

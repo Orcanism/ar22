@@ -129,7 +129,7 @@ body {
 }
 
 .body {
-    margin : 50px;
+    margin : 20px;
 }
 
 .bodyContact {
@@ -138,6 +138,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .bodyContact img {
@@ -147,6 +148,7 @@ body {
     width: 309px;
     max-width: 100%;
     height: auto;
+    max-height: 549px;
 }
 
 .contactForm {

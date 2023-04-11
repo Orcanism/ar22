@@ -17,6 +17,10 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    font-size: 25px;
+}
+
 image {
     padding: 5px;
 }
@@ -112,4 +116,37 @@ body {
 
 .body {
     margin : 50px;
+}
+
+.videoListContest,.videoListChill {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--backgroundColor);
+    margin: 10px;
+}
+
+.videoListContest div,.videoListChill div {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videoListContest div > *,.videoListChill div > * {
+    margin: 5px;
+}
+
+.bodyVideos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.bodyVideos h2 {
+    margin-top: 10px;
 }

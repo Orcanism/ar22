@@ -23,7 +23,6 @@ image {
 
 body {
     min-height: 100vh;
-    /*margin: 10px;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,7 +35,8 @@ body {
 }
 
 .header {
-    width: 100%;
+    width: auto;
+    margin: 10px;
     background-color: transparent;
     display: flex;
     flex-direction: row;
@@ -111,6 +111,5 @@ body {
 }
 
 .body {
-    /* min-height: 100vh; */
-    margin: 10px;
+    margin : 50px;
 }

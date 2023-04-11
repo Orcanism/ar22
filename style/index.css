@@ -21,6 +21,20 @@ image {
     padding: 5px;
 }
 
+input:focus {
+    outline: none;
+    box-shadow: var(--textHoverColor);
+    border:2px solid var(--textHoverColor);
+    border-style: outset;
+}
+
+textarea:focus {
+    outline: none;
+    box-shadow: var(--textHoverColor);
+    border:2px solid var(--textHoverColor);
+    border-style: outset;
+}
+
 body {
     min-height: 100vh;
     display: flex;
@@ -112,4 +126,28 @@ body {
 
 .body {
     margin : 50px;
+}
+
+.bodyContact {
+    background-color: var(--backgroundColor);
+    padding: 10px;
+    display: flex;
+}
+
+.bodyContact img {
+    width: 18%;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactForm > * {
+    margin: 5px;
+}
+
+.contactForm input,.contactForm textarea {
+    padding: 2px;
 }

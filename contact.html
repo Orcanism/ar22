@@ -11,26 +11,31 @@
 </head>
 <body>
     <div class="header">
-        <a class="menuButton" onclick="dropdownMenu()"><img src="image/logos/menuIcon.png" width="50px" height="50px"></a>
+        <a class="menuButton" onclick="dropdownMenu()" style="width: 50px; height: 50px;"><img src="image/logos/menuIcon.png" width="50px" height="50px" /></a>
         <div class="dropdownMenu">
             <a href="index.html#">Acceuil</a>
             <a href="news.html">News</a>
             <a href="crew.html">Crew</a>
             <a href="about.html">À Propos</a>
             <a href="inscriptions.html">Inscriptions</a>
-            <a href="Contact.html">Contact</a>
+            <a href="php/contact.php">Contact</a>
         </div>
+        <a class="easterEgg" onclick="easterEgg()" style="cursor: default; width: 100px; height: 50px;"><img src="image/logos/logo AR22.png" width="100px" height="50px" /></a>
+        <audio id="easterEgg" src="audio/easterEgg.mp3"></audio>
     </div>
     <div class="body">
-        <form action="http://127.0.0.1/Ar22website/php/contact.php" method="post">
-            Mail: <input type="text" name="mail" value="" />
-            <br />
-            Sujet: <input type="text" name="sujet" value="" />
-            <br />
-            Message: <textarea name="message" cols="40" rows="20"></textarea>
-            <br />
-            <input type="submit" name="envoyer" value="Envoyer" />
-        </form>
+        <div class="bodyContact">
+            <form class="contactForm" action="http://127.0.0.1/Ar22website/php/contact.php" method="post">
+                <p>Mail :</p>
+                <input type="text" name="mail" value="" />
+                <p>Sujet :</p>
+                <input type="text" name="sujet" value="" />
+                <p>Message :</p>
+                <textarea name="message" cols="40" rows="20"></textarea>
+                <input type="submit" name="envoyer" value="Envoyer" style="cursor: pointer"/>
+            </form>
+            <img src="image/logos/t_shirt_contest_rouge.png" />
+        </div>
     </div>
     <div class="footer">
         <div class="leftFoot">

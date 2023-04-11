@@ -3,7 +3,6 @@
     --textHoverColor: rgb(166,34,45);
     --backgroundColor: lightgray;
     font-size: 30px;
-    margin: 10px;
 }
 
 * {
@@ -20,6 +19,14 @@ a {
 
 image {
     padding: 5px;
+}
+
+body {
+    min-height: 100vh;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 450px) {
@@ -104,5 +111,5 @@ image {
 }
 
 .body {
-    height: 200px;
+    /* min-height: 100vh; */
 }

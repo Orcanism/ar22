@@ -50,6 +50,19 @@ body {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .crewWrap {
+        flex-wrap: wrap;
+    }
+    .imgWrap {
+        justify-content: center;
+    }
+    .imgWrap img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 .body {
     margin : 20px;
 }
@@ -220,7 +233,6 @@ body {
 
 .crewWrap {
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
     background-color: var(--backgroundColor);
     padding: 10px;
@@ -230,13 +242,12 @@ body {
 .imgWrap {
     position: relative;
     display: flex;
+    flex-grow: 1;
     margin: 20px;
 }
 
 .imgWrap img {
     width: 400px;
-    max-width: 100%;
-    height: auto;
 }
 
 .cyrilImg,.theoImg,.tomImg,.clementImg,.erineImg,.samanthaImg {
@@ -253,8 +264,9 @@ body {
 
 .crewText {
     margin: 30px;
-    flex-grow: 1;
     text-align: center;
+    flex-grow: 1;
+    /* max-width: 100vh; */
 }
 
 .crewText p {

@@ -3,6 +3,12 @@
     --textHoverColorRed: rgb(166,34,45);
     --textHoverColorGray: rgb(235, 235, 235);
     --backgroundColor: lightgray;
+    --redColor: #f76161;
+    --greenColor: #00b796;
+    --yellowColor: #ecf791;
+    --redHoverColor: #c34c4c;
+    --greenHoverColor: #00836c;
+    --yellowHoverColor: #bbc373;
     font-size: 30px;
 }
 
@@ -14,7 +20,6 @@
 }
 
 a {
-    color: var(--textColor);
     text-decoration: none;
 }
 
@@ -28,8 +33,8 @@ input,textarea {
 
 input:focus,textarea:focus {
     outline: none;
-    box-shadow: var(--textHoverColorRed);
-    border:2px solid var(--textHoverColorRed);
+    box-shadow: var(--greenHoverColor);
+    border:2px solid var(--greenHoverColor);
     border-style: outset;
 }
 
@@ -64,6 +69,14 @@ body {
     }
 }
 
+.greenBG {background-color: var(--greenColor)}
+.redBG {background-color: var(--redColor)}
+.yellowBG {background-color: var(--yellowColor)}
+
+.greenText a, .greenText h1, .greenText h2,.greenText p {color: var(--greenColor)}
+.redText a, .redText h1, .redText h2, .redText p {color: var(--redColor)}
+.yellowText a, .yellowText h1, .yellowText h2, .yellowText p {color: var(--yellowColor)}
+
 .body {
     margin : 20px;
 }
@@ -89,7 +102,7 @@ body {
 }
 
 .menuButton:hover {
-    background-color: var(--textHoverColorRed);
+    background-color: var(--redHoverColor);
 }
 
 .dropdownMenu {
@@ -114,13 +127,12 @@ body {
 }
 
 .dropdownMenu a:hover,.footer a:hover {
-    color: var(--textHoverColorRed);
+    color: var(--yellowHoverColor);
 }
 
 /* FOOTER STYLE */
 
 .footer {
-    background-color: var(--backgroundColor);
     min-height: 200px;
     width: 100%;
     display: flex;
@@ -161,7 +173,6 @@ body {
 .bodyContact img {
     padding: 10px;
     padding-left: 20px;
-    background-color: var(--backgroundColor);
     width: 309px;
     max-width: 100%;
     height: auto;
@@ -170,7 +181,6 @@ body {
 
 .contactForm {
     padding: 10px;
-    background-color: var(--backgroundColor);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -209,7 +219,6 @@ body {
     flex-wrap: wrap;
     align-items: center;
     padding: 10px;
-    background-color: var(--backgroundColor);
     margin: 10px;
 }
 
@@ -235,7 +244,6 @@ body {
 .crewWrap {
     display: flex;
     align-items: center;
-    background-color: var(--backgroundColor);
     padding: 10px;
     margin: 10px;
 }
@@ -270,7 +278,11 @@ body {
 }
 
 .crewText h1 {
-    margin: 25px;
+    margin: 20px;
+}
+
+.crewText h2 {
+    margin-bottom: 40px;
 }
 
 .crewText p {
